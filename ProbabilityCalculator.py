@@ -44,7 +44,6 @@ def main():
             print("Invalid input, try again.")
             continue
 
-        
         known = your_counts.get(face, 0)
         unknown_dice = total_dice - len(your_dice)
         p = 1 / 6
@@ -60,7 +59,6 @@ def main():
         print(f"Chance claim is TRUE:  {prob_true*100:.2f}%")
         print(f"Chance claim is FALSE: {prob_false*100:.2f}%")
 
-        
         print("\nDid someone check the claim?")
         checked = input("Type 'y' for yes (claim checked), 'n' for no (next claim): ").strip().lower()
 
@@ -82,12 +80,10 @@ def main():
                 print("Invalid input, no dice removed.")
         else:
             print("No one checked, continuing with same dice count.")
-
-        
+            
         if total_dice <= 1:
             print("\nGame over — only one die remains!")
             break
-
         
         cont = input("\nDo you want to check another claim? (y/n): ").strip().lower()
         if cont != "y":
